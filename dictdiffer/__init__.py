@@ -21,16 +21,24 @@ class DictDiffer(object):
         ]
         self.intersect = self.current_keys.intersection(self.past_keys)
 
+    @property
     def added(self):
         return self.current_keys - self.intersect
 
+    @property
     def removed(self):
         return self.past_keys - self.intersect
 
+    @property
     def changed(self):
         return set(o for o in self.intersect
                    if self.past_dict[o] != self.current_dict[o])
 
+    @property
     def unchanged(self):
         return set(o for o in self.intersect
                    if self.past_dict[o] == self.current_dict[o])
+
+    @property
+    def is_identical(self):
+        return self.current_dict == self.past_dict

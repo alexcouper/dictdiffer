@@ -12,6 +12,14 @@ Generates only top-level differences and does not recurse.
 Originally presented in a [Stack Overflow answer]
 (http://stackoverflow.com/questions/1165352/fast-comparison-between-two-python-dictionary/1165552#1165552).
 
+
+Running Tests
+=============
+
+ $ pip install -r requirements_test.txt
+ $ nosetests
+
+
 License
 =======
 
