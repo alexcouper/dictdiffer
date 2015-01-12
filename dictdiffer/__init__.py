@@ -40,5 +40,5 @@ class DictDiffer(object):
                    if self.past_dict[o] == self.current_dict[o])
 
     @property
-    def is_identical(self):
+    def identical(self):
         return self.current_dict == self.past_dict

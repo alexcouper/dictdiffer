@@ -28,10 +28,10 @@ class TestDictDifferEquality(TestCase):
         a = {'a': 1, 'b': 1, 'c': 0}
         b = {'a': 1, 'b': 2, 'd': 0}
         d = DictDiffer(b, a)
-        self.assertEqual(d.is_identical, False)
+        self.assertFalse(d.identical)
 
     def test_equality_identical(self):
         a = {'a': 1, 'b': 1, 'c': 0}
         b = {'a': 1, 'b': 1, 'c': 0}
         d = DictDiffer(b, a)
-        self.assertEqual(d.is_identical, True)
+        self.assertTrue(d.identical)
